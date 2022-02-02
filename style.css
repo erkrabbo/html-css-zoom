@@ -9,6 +9,7 @@
 html{
     font-size: 16px;
 
+    /* VARS */
     --headerHeight: 3rem;
     --footerHeight: 4rem;
     --camsMarginTopBottom: .3rem;
@@ -48,6 +49,8 @@ header.view{
 .responsive-menu{
     display: none;
 
+    margin-left: .5em;
+
 }
 
 .responsive-menu> .fas{
@@ -71,8 +74,6 @@ header.view{
     text-transform: capitalize;
 
     padding: .2em .4em;
-
-    /* height: 1.5em; */
 
     margin-right: .5em;
 
@@ -177,4 +178,18 @@ footer{
 .footMenu>div>.fas{
     font-size: 1.5rem;
     padding-bottom: 5px;
+}
+
+@media screen and (max-width: 865px) {
+    footer .footMenu:nth-child(2){
+        display: none;
+    }
+
+    .responsive-menu{
+        display: flex;
+    }
+
+    header.view{
+        justify-content: space-between;
+    }
 }
