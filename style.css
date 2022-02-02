@@ -40,6 +40,15 @@ header.view{
     color: white;
 }
 
+.responsive-menu{
+    display: none;
+
+}
+
+.responsive-menu> .fas{
+    margin-right: .5em;
+}
+
 .view div{
     align-items:stretch;
 }
@@ -51,7 +60,7 @@ header.view{
 } 
 
 
-.view .speaker, .fullScreen{
+.view .speaker, .fullScreen, .responsive-menu{
     background-color: #4a4a4a;
     text-transform: capitalize;
 
@@ -93,6 +102,7 @@ main{
     background-size:cover;
 
     min-width: 120px;
+    min-height: 100px;
 
     margin: .3rem;
 }
