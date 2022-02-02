@@ -8,6 +8,11 @@
 
 html{
     font-size: 16px;
+
+    --headerHeight: 3rem;
+    --footerHeight: 4rem;
+    --camsMarginTopBottom: .3rem;
+    --camsMarginLeftRight: .1em;
 }
 
 /* UTILITY */
@@ -32,9 +37,9 @@ html{
 header.view{
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+    align-items: flex-start;
     
-    height: 4rem;
+    height:var(--headerHeight);
     
     background-color: black;
     color: white;
@@ -49,8 +54,9 @@ header.view{
     margin-right: .5em;
 }
 
-.view div{
-    align-items:stretch;
+.view>div{
+    align-items:center;
+    margin-top: .2em;
 }
  
 .view img{
@@ -78,7 +84,7 @@ header.view{
 
 
 main{
-    height: calc(100vh - 8rem);
+    height: calc(100vh - var(--headerHeight) - var(--footerHeight));
     background-color: black;
     align-content: flex-start;
 
@@ -92,10 +98,10 @@ main{
 }
 
 .user-cam{
-    flex-basis: calc(100% / 7 - .6rem);
-    height: calc(100% / 5 - .6rem);
+    flex-basis: calc(100% / 7 - var(--camsMarginLeftRight) * 2);
+    height: calc(100% / 5 - var(--camsMarginTopBottom) * 2);
 
-    background-image: url(https://picsum.photos/300/200);
+    background-image: url(https://picsum.photos/1920/1080);
     background-position: center;
     background-repeat: no-repeat;
 
@@ -104,7 +110,7 @@ main{
     min-width: 120px;
     min-height: 100px;
 
-    margin: .3rem;
+    margin: var(--camsMarginTopBottom) var(--camsMarginLeftRight);
 }
 .user-cam img{
     max-height: 10rem;
@@ -128,7 +134,7 @@ footer{
 
     width: 100%;
     background-color: #222222;
-    height: 4rem;
+    height: var(--footerHeight);
 
     align-items: center;
     justify-content: space-between;
