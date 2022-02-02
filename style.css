@@ -101,6 +101,8 @@ main{
     left: 0;
 
     background-color: rgba(168,168,168,0.60);
+
+    text-transform: capitalize;
 }
 
 
