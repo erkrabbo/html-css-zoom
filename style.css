@@ -24,6 +24,9 @@ html{
     position: absolute;
 }
 
+.green{
+    color: green;
+}
 /* STRUCT */
 
 header.view{
